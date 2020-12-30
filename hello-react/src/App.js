@@ -32,9 +32,26 @@ import IterationSample from './IterationSample';
 //   return <EventPractice />;
 // };
 
+import ValidationSample from './ValidationSample';
+
+// class App extends Component {
+//   render() {
+//     return <ValidationSample />;
+//   }
+// }
+
+import ScrollBox from './ScrollBox';
+
 class App extends Component {
   render() {
-    return <IterationSample />;
+    return (
+      <div>
+        <ScrollBox ref={(ref) => (this.scrollBox = ref)}></ScrollBox>
+        <button onClick={() => this.scrollBox.scrollToBottom()}>
+          맨 밑으로
+        </button>
+      </div>
+    );
   }
 }
 
