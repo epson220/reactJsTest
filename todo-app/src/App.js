@@ -9,17 +9,30 @@ import {
 } from '../node_modules/react/cjs/react.development';
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: '리엑트 기초 알아보기',
-      checked: true,
-    },
-    { id: 2, text: '컴포넌트 스타일링 해보기', checked: true },
-    { id: 3, text: '일정 관리 앱 만들어보기', checked: false },
-  ]);
+  function createBulkTodos() {
+    const array = [];
+    for (let i = 1; i <= 2500; i++) {
+      array.push({
+        id: i,
+        text: `할 일 ${i}`,
+        checked: false,
+      });
+    }
+    return array;
+  }
 
-  const nextId = useRef(4);
+  // const [todos, setTodos] = useState([
+  //   {
+  //     id: 1,
+  //     text: '리엑트 기초 알아보기',
+  //     checked: true,
+  //   },
+  //   { id: 2, text: '컴포넌트 스타일링 해보기', checked: true },
+  //   { id: 3, text: '일정 관리 앱 만들어보기', checked: false },
+  // ]);
+  const [todos, setTodos] = useState(createBulkTodos);
+
+  const nextId = useRef(2501);
 
   const onInsert = useCallback(
     (text) => {
