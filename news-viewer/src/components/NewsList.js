@@ -48,7 +48,7 @@ const NewsList = ({ category }) => {
   if (loading) {
     return <NewsListBlock>대기 중...</NewsListBlock>;
   }
-  if (!articles) {
+  if (!response) {
     return null;
   }
   if (error) {
