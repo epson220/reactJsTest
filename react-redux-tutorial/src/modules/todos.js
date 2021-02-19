@@ -1,4 +1,4 @@
-import { createAction, handleAction, handleActions } from 'redux-actions';
+import { createAction, handleActions } from 'redux-actions';
 import produce from 'immer';
 
 const CHANGE_INPUT = 'todos/CHANGE_INPUT';
@@ -104,10 +104,11 @@ const initialState = {
 //   initialState,
 // );
 
-const todos = handleAction(
+const todos = handleActions(
   {
     [CHANGE_INPUT]: (state, { payload: input }) =>
       produce(state, (draft) => {
+        console.log(input);
         draft.input = input;
       }),
     [INSERT]: (state, { payload: todo }) =>
