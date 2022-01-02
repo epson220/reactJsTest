@@ -13,22 +13,22 @@
 
 // export default App;
 
-// import React, { Component } from "react";
-// import CSSModule from "./CSSModule";
+import React, { Component } from 'react';
+import CSSModule from './CSSModule';
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <CSSModule></CSSModule>
-//       </div>
-//     );
-//   }
-// }
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <CSSModule></CSSModule>
+      </div>
+    );
+  }
+}
 
 // export default App;
 
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 import StyledComponent from "./StyledComponent";
 
 class App extends Component {
@@ -40,5 +40,5 @@ class App extends Component {
     );
   }
 }
-
+*/
 export default App;

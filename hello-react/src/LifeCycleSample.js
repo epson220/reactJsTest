@@ -12,7 +12,7 @@ class LifeCycleSample extends Component {
     super(props);
     console.log('constructor');
   }
-
+  // 바뀐 props를 state에 동기화 시킬때 사용 (props = state)
   static getDerivedStateFromProps(nextProps, prevState) {
     console.log('getDerivedStateFromProps');
     if (nextProps.color !== prevState.color) {
@@ -27,7 +27,7 @@ class LifeCycleSample extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate', nextProps, nextState);
-
+    // 숫자의 마지막 자리가 4면 리렌더링하지 않는다.
     return nextState.number % 10 !== 4;
   }
 
@@ -65,7 +65,6 @@ class LifeCycleSample extends Component {
 
     return (
       <div>
-        {this.props.missing.value}
         <h1 style={style} ref={(ref) => (this.myRef = ref)}>
           {this.state.number}
         </h1>

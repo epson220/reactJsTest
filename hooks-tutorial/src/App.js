@@ -1,6 +1,7 @@
-// import React, { useState } from "react";
-// import Counter from "./Counter";
-// import Info from "./Info";
+import React, { useState } from 'react';
+import Counter from './Counter';
+import Info from './Info';
+import Average from './Average';
 
 // const App = () => {
 //   const [visible, setVisible] = useState(false);
@@ -12,27 +13,19 @@
 //           setVisible(!visible);
 //         }}
 //       >
-//         {visible ? "숨기기" : "보이기"}
+//         {visible ? '숨기기' : '보이기'}
 //       </button>
 //       <hr />
 //       {visible && <Info />}
 //     </div>
 //   );
-// };
-
-// export default App;
-
-// import React from "react";
-// import Info from "./Info";
+//};
 
 // const App = () => {
 //   return <Info />;
 // };
 
-// export default App;
-
-import React from "react";
-import Average from "./Average";
+// import Average from './Average';
 
 const App = () => {
   return <Average />;

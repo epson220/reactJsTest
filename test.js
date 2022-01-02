@@ -4,20 +4,9 @@ const todos = [
 ];
 const nextTodos = [...todos];
 
+console.log(todos);
+console.log(nextTodos);
+
 nextTodos[0].checked = false;
 
-console.log(todos[0]);
-console.log(nextTodos[0]);
 console.log(todos[0] === nextTodos[0]);
-
-nextTodos[0] = {
-  ...nextTodos[0],
-  checked: false,
-};
-
-console.log(todos[0] === nextTodos[0]);
-
-const array = [1, 2, 3, 4, 5];
-const nextArrayGood = [...array];
-nextArrayGood[0] = 100;
-console.log(array[0] === nextArrayGood[0]);

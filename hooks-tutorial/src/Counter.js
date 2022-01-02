@@ -1,10 +1,10 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer, useState } from 'react';
 
 function reducer(state, action) {
   switch (action.type) {
-    case "INCREMENT":
+    case 'INCREMENT':
       return { value: state.value + 1 };
-    case "DECREMENT":
+    case 'DECREMENT':
       return { value: state.vale - 1 };
     default:
       return state;
@@ -19,8 +19,8 @@ const Counter = () => {
       <p>
         현재 카운터 값은 <b>{state.value}</b>
       </p>
-      <button onClick={() => setValue(value + 1)}>+1</button>
-      <button onClick={() => setValue(value - 1)}>-1</button>
+      <button onClick={() => dispatch({ type: 'INCREMENT' })}>+1</button>
+      <button onClick={() => dispatch({ type: 'DECREMENT' })}>-1</button>
     </div>
   );
 };
